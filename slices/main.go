@@ -7,7 +7,7 @@ func Pic(dx, dy int) [][]uint8 {
 	for y := 0; y <= dy; y++ {
 		var core []uint8
 		for x := 0; x <= dx; x++ {
-			core = append(core, uint8(x^y))
+			core = append(core, uint8(y*y*x*x))
 		}
 		shell = append(shell, core)
 	}
