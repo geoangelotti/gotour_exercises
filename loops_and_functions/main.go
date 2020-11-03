@@ -7,7 +7,7 @@ import (
 
 func Sqrt(x float64) float64 {
 	z := float64(1)
-	for math.Abs(z*z-x) > 0.000001 {
+	for math.Abs(z*z-x) > 1e-6 {
 		z -= (z*z - x) / (2 * z)
 	}
 	return z
